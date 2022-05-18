@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
 
     private ArrayList<Blommor> blommorList;
     private RecyclerView recyclerView;
-    private BlomAdapter adapter;
+    private Adapter adapter;
 
     private final String JSON_URL = "https://mobprog.webug.se/json-api?login=b21hamwe";
     private String TAG = "==>";
@@ -26,8 +26,8 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        adapter = new BlomAdapter();
-        blommorList = new ArrayList<blommor>();
+        adapter = new Adapter();
+        blommorList = new ArrayList<Blommor>();
         recyclerView = findViewById(R.id. recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
