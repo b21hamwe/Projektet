@@ -48,11 +48,33 @@
 
 
     <TextView
+        android:id="@+id/sizeprint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Size"
+        app:layout_constraintTop_toBottomOf="@+id/blomma"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+
+    <TextView
+        android:id="@+id/size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Size"
+        app:layout_constraintTop_toBottomOf="@+id/sizeprint"
+        app:layout_constraintStart_toStartOf="parent"
+
+        />
+
+
+    <TextView
         android:id="@+id/companyprint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Company"
-        app:layout_constraintTop_toBottomOf="@+id/blomma"
+        app:layout_constraintTop_toBottomOf="@+id/size"
         app:layout_constraintStart_toStartOf="parent"
 
         />
