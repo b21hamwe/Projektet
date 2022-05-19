@@ -16,7 +16,7 @@ public class ViewHolder extends RecyclerView.ViewHolder {
     public ViewHolder(@NonNull View itemView) {
         super(itemView);
 
-        name = itemView.findViewById(R.id.blommaprint);
+        name = itemView.findViewById(R.id.nameprint);
         size = itemView.findViewById(R.id.sizeprint);
         company = itemView.findViewById(R.id.companyprint);
         id = itemView.findViewById(R.id.IDprint);
