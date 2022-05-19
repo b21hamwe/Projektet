@@ -22,11 +22,13 @@ public class Adapter extends RecyclerView.Adapter<ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+
         Blommor blommor = blommorList.get(position);
 
         holder.name.setText(blommor.name);
         holder.size.setText(String.valueOf(blommor.getSize()));
         holder.company.setText(blommor.company);
+        holder.id.setText(blommor.getID());
     }
 
     @Override
@@ -34,7 +36,7 @@ public class Adapter extends RecyclerView.Adapter<ViewHolder> {
         return blommorList.size();
     };
 
-    public void setBlommor(List<Blommor> blommorList) {
+    public void setblommorList(List<Blommor> blommorList) {
         this.blommorList = blommorList;
     };
 
