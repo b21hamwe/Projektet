@@ -28,7 +28,7 @@
         />
 
     <TextView
-        android:id="@+id/blommaprint"
+        android:id="@+id/nameprint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Blomma"
@@ -37,11 +37,11 @@
         />
 
     <TextView
-        android:id="@+id/blomma"
+        android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Blomma"
-        app:layout_constraintTop_toBottomOf="@+id/blommaprint"
+        app:layout_constraintTop_toBottomOf="@+id/nameprint"
         app:layout_constraintStart_toStartOf="parent"
 
         />
@@ -52,7 +52,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Size"
-        app:layout_constraintTop_toBottomOf="@+id/blomma"
+        app:layout_constraintTop_toBottomOf="@+id/name"
         app:layout_constraintStart_toStartOf="parent"
         />
 
