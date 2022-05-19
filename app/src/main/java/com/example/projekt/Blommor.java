@@ -8,11 +8,11 @@ public class Blommor {
         String ID;
 
 
-        public String getBlomma() {
+        public String getName() {
                 return name;
         }
 
-        public void setBlomma(String blomma) {
+        public void setName(String blomma) {
                 this.name = blomma;
         }
 
