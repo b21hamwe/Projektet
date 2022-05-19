@@ -6,7 +6,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements JsonTask.JsonTaskListener {
 
@@ -31,10 +36,22 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         recyclerView = findViewById(R.id. recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
+
+        new JsonTask(this).execute(JSON_URL);
     }
 
 
     @Override
     public void onPostExecute(String json) {
+        Gson gson = new Gson();
+        Type type = new TypeToken<List<Blommor>>() {
+        }.getType();
+
+        List<Blommor> listOfBlommor = gson.fromJson(json,type);
+        adapter.setBlommor(listOfBlommor);
+        adapter.notifyDataSetChanged();
+
+
+
     }
 }
