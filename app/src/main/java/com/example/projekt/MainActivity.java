@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         }.getType();
 
         List<Blommor> listOfblommorList = gson.fromJson(json,type);
-        adapter.setBlommor(listOfblommorList);
+        adapter.setblommorList(listOfblommorList);
         adapter.notifyDataSetChanged();
 
 
