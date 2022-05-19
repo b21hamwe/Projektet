@@ -4,7 +4,7 @@ public class Blommor {
 
         String name;
         Integer size;
-        String Company;
+        String company;
         String ID;
 
 
@@ -25,11 +25,11 @@ public class Blommor {
         }
 
         public String getCompany() {
-                return Company;
+                return company;
         }
 
         public void setCompany(String company) {
-                Company = company;
+                company = company;
         }
 
         public String getID() {
@@ -40,9 +40,10 @@ public class Blommor {
                 this.ID = ID;
         }
 
-        public Blommor(String Name, Integer Size, String ID){
+        public Blommor(String Name, Integer size, String ID, String company){
                 this.name = Name;
-                this.size = Size;
+                this.size = size;
                 this.ID = ID;
+                this.company = company;
         }
 }
