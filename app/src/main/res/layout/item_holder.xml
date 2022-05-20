@@ -28,7 +28,7 @@
                 />
 
             <TextView
-                android:id="@+id/IDprint"
+                android:id="@+id/companyprint"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ID"
@@ -39,25 +39,13 @@
                 />
 
             <TextView
-                android:id="@+id/sizeprint"
+                android:id="@+id/IDprint"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Size"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/IDprint"
-                android:textAllCaps="true"
-                android:textStyle="bold"
-                />
-
-            <TextView
-                android:id="@+id/companyprint"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Company"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/sizeprint"
+                app:layout_constraintTop_toBottomOf="@+id/companyprint"
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 />
@@ -66,10 +54,22 @@
                 android:id="@+id/nameprint"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="Company"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/IDprint"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/sizeprint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="Blomma"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/companyprint"
+                app:layout_constraintTop_toBottomOf="@+id/nameprint"
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 />
