@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebViewClient;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -31,11 +32,12 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
     private String TAG = "==>";
 
 
+    //public void showExternalWebPage() {
 
+        //webView.loadUrl("https://mobprog.webug.se/json-api?login=b21hamwe");
+    //}
 
-    public void showInternalWebPage(){
-        webView.loadUrl("file:///android_asset/menu.xml");
-    }
+    public void showInternalWebPage(){webView.loadUrl("file:///android_asset/menu.xml");}
 
 
     @Override
@@ -56,9 +58,14 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         webView.loadUrl("file:///android_asset/menu.xml");
 
 
-
-
         new JsonTask(this).execute(JSON_URL);
+
+
+        @Override
+        public void onClick(View view) {
+            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
+        }
     }
 
 
@@ -91,7 +98,12 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_internal2_web) {
+            showInternalWebPage();
+            Log.d("==>", "Will display external web page");
+            return true;
+        }
 
         if (id == R.id.action_internal_web) {
             showInternalWebPage();
