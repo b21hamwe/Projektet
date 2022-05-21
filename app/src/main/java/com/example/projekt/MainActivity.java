@@ -91,12 +91,7 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_external_web) {
-            showExternalWebPage();
-            Log.d("==>", "Will display external web page");
-            return true;
-        }
+
 
         if (id == R.id.action_internal_web) {
             showInternalWebPage();
