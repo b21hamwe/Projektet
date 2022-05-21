@@ -31,10 +31,7 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
     private String TAG = "==>";
 
 
-    public void showExternalWebPage() {
 
-        webView.loadUrl("https://mobprog.webug.se/json-api?login=b21hamwe");
-    }
 
     public void showInternalWebPage(){
         webView.loadUrl("file:///android_asset/menu.xml");
