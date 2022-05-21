@@ -14,8 +14,8 @@ public class About extends AppCompatActivity {
         setContentView(R.layout.activity_about);
     }
 
-    public WebSettings getSettings() {
-    }
+    //public WebSettings getSettings() {
+    //}
 
     public void setWebViewClient(WebViewClient webViewClient) {
     }
