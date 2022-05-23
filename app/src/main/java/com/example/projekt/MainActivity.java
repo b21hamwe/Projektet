@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
     private ArrayList<Blommor> blommorList;
     private RecyclerView recyclerView;
     private Adapter adapter;
-    private Button button;
+
 
 
 
@@ -56,15 +56,9 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         recyclerView = findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
-        button = findViewById(R.id.action_internal_web);
 
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, About.class);
-                startActivity(intent);
-            }
-        });
+
+
 
 
         new JsonTask(this).execute(JSON_URL);

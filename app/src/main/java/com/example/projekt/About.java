@@ -2,18 +2,21 @@ package com.example.projekt;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Button;
 
 public class About extends AppCompatActivity {
 
 
     private WebView webView;
-
+    private Button button;
 
     public void showInternalWebPage(){
         webView.loadUrl("file:///android_asset/about.HTML");}
@@ -27,7 +30,18 @@ public class About extends AppCompatActivity {
         webView = findViewById(R.id.web_view);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient());
+        button = findViewById(R.id.action_internal_web);
 
+
+
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(About.this, About.class);
+                startActivity(intent);
+            }
+        });
     }
 
     //public WebSettings getSettings() {
