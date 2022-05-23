@@ -34,10 +34,10 @@ public class Adapter extends RecyclerView.Adapter<ViewHolder> {
     @Override
     public int getItemCount() {
         return blommorList.size();
-    };
+    }
 
     public void setblommorList(List<Blommor> blommorList) {
         this.blommorList = blommorList;
-    };
+    }
 
 }

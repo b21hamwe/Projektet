@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
     private ArrayList<Blommor> blommorList;
     private RecyclerView recyclerView;
     private Adapter adapter;
-    private WebView View;
+    private WebView webView;
     private Button button;
 
 
@@ -41,24 +41,25 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
 
 
 
-    public void showInternalWebPage(){View.loadUrl("file:///android_asset/about.HTML");}
+    public void showInternalWebPage(){
+        webView.loadUrl("file:///android_asset/about.HTML");}
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //Toolbar toolbar = findViewById(R.id.toolbar);
-        //setSupportActionBar(toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
-        View = findViewById(R.id.web_View);
+        webView = findViewById(R.id.web_view);
         adapter = new Adapter();
         blommorList = new ArrayList<Blommor>();
         recyclerView = findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
-        //View.getSettings().setJavaScriptEnabled(true);
-        //View.setWebViewClient(new WebViewClient());
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.setWebViewClient(new WebViewClient());
         button = findViewById(R.id.action_internal_web);
 
         button.setOnClickListener(new View.OnClickListener() {
