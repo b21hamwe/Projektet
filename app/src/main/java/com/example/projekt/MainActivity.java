@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
     private ArrayList<Blommor> blommorList;
     private RecyclerView recyclerView;
     private Adapter adapter;
-    private WebView webView;
     private Button button;
 
 
@@ -41,8 +40,7 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
 
 
 
-    public void showInternalWebPage(){
-        webView.loadUrl("file:///android_asset/about.HTML");}
+
 
 
     @Override
@@ -52,14 +50,12 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        webView = findViewById(R.id.web_view);
+
         adapter = new Adapter();
         blommorList = new ArrayList<Blommor>();
         recyclerView = findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
-        webView.getSettings().setJavaScriptEnabled(true);
-        webView.setWebViewClient(new WebViewClient());
         button = findViewById(R.id.action_internal_web);
 
         button.setOnClickListener(new View.OnClickListener() {
@@ -100,21 +96,6 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
     }
 
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
 
-
-        if (id == R.id.action_internal_web) {
-            showInternalWebPage();
-            Log.d("==>", "Will display internal web page");
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 
 }
