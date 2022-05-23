@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -11,12 +12,14 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class About extends AppCompatActivity {
 
 
     private WebView webView;
     private Button button;
+    private TextView unsplash;
 
     public void showInternalWebPage(){
         webView.loadUrl("file:///android_asset/about.HTML");}
@@ -31,9 +34,9 @@ public class About extends AppCompatActivity {
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient());
         button = findViewById(R.id.action_internal_web);
+        unsplash = findViewById(R.id.unsplash);
 
-
-
+        unsplash.setMovementMethod(LinkMovementMethod.getInstance());
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
