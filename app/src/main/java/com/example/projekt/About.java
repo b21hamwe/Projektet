@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
 import android.util.Log;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebSettings;
@@ -18,8 +19,8 @@ public class About extends AppCompatActivity {
 
 
     private WebView webView;
-    private Button button;
     private TextView unsplash;
+    private MenuItem item;
 
     public void showInternalWebPage(){
         webView.loadUrl("file:///android_asset/about.HTML");}
@@ -27,24 +28,17 @@ public class About extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about);
+        setContentView(R.layout.about);
 
 
         webView = findViewById(R.id.web_view);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient());
-        button = findViewById(R.id.action_internal_web);
         unsplash = findViewById(R.id.unsplash);
 
-        unsplash.setMovementMethod(LinkMovementMethod.getInstance());
+       // unsplash.setMovementMethod(LinkMovementMethod.getInstance());
 
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(About.this, About.class);
-                startActivity(intent);
-            }
-        });
+
     }
 
     //public WebSettings getSettings() {
@@ -58,6 +52,14 @@ public class About extends AppCompatActivity {
 
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.meny, menu);
+
+        return true;
+    }
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
@@ -69,6 +71,9 @@ public class About extends AppCompatActivity {
             showInternalWebPage();
             Log.d("==>", "Will display internal web page");
             return true;
+        }
+        else{
+            finish();
         }
 
         return super.onOptionsItemSelected(item);
