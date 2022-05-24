@@ -26,8 +26,8 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_height="match_parent"
+        android:layout_margin="60dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:cardBackgroundColor="#87CEEB"
@@ -36,14 +36,9 @@
         <TextView
             android:id="@+id/unsplash"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginTop="70dp"
-            android:text="Applikationen W blommor riktar sig till samtliga individer på denna jord som
-        finner sig till ro för att förgylla vardagen med exempelvis en ros. En färglad
-        blomsterkrans som kompletterar din hjässa, en
-        harmonisk bukett för den där speciella eller varför inte en hop liljor för fönstergaveln.
-        Allt detta finner du på W blommor, varför plocka?
-        När du kan shoppa, välkommen till oss."
+            android:text="@string/unsplash"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.cardview.widget.CardView>
