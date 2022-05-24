@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Projekt</string>
-    <string name="action_internal_web">Internal Web Page</string>
-    <string name="close_internal_web">Internal Web Page</string>
+    <string name="action_internal_web">About Page</string>
+    <string name="close_internal_web">Close About Page</string>
     <string name="unsplash">Bild av blomman är hämtad från <a href="https://unsplash.com/photos/iMdsjoiftZo">Unsplash</a>
         Applikationen W blommor riktar sig till samtliga individer på denna jord som finner sig till ro för att förgylla vardagen med exempelvis en ros. En färglad blomsterkrans som kompletterar din hjässa, en harmonisk bukett för den där speciella eller varför inte en hop liljor för fönstergaveln. Allt detta finner du på W blommor, varför plocka? När du kan shoppa! Välkommen till oss</string>
 </resources>
