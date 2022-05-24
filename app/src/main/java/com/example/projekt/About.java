@@ -70,7 +70,7 @@ public class About extends AppCompatActivity {
         int id = item.getItemId();
 
 
-        if (id == R.id.action_internal_web) {
+        if (id == R.id.close_internal_web) {
 
             Intent intent = new Intent(About.this, MainActivity.class);
             startActivity(intent);
