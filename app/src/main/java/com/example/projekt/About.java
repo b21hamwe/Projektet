@@ -1,6 +1,7 @@
 package com.example.projekt;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -30,7 +31,8 @@ public class About extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
-
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         webView = findViewById(R.id.web_view);
         //webView.getSettings().setJavaScriptEnabled(true);
@@ -55,7 +57,7 @@ public class About extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.meny, menu);
+        getMenuInflater().inflate(R.menu.close_meny, menu);
 
         return true;
     }
@@ -69,13 +71,12 @@ public class About extends AppCompatActivity {
 
 
         if (id == R.id.action_internal_web) {
-            showInternalWebPage();
-            Log.d("==>", "Will display internal web page");
+
+            Intent intent = new Intent(About.this, MainActivity.class);
+            startActivity(intent);
             return true;
         }
-        else{
-            finish();
-        }
+
 
         return super.onOptionsItemSelected(item);
     }
