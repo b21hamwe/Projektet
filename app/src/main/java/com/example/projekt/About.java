@@ -23,17 +23,18 @@ public class About extends AppCompatActivity {
     private MenuItem item;
 
     public void showInternalWebPage(){
-        webView.loadUrl("file:///android_asset/about.HTML");}
+        webView.loadUrl("file://android_asset/about.html");
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.about);
+        setContentView(R.layout.activity_about);
 
 
         webView = findViewById(R.id.web_view);
-        webView.getSettings().setJavaScriptEnabled(true);
-        webView.setWebViewClient(new WebViewClient());
+        //webView.getSettings().setJavaScriptEnabled(true);
+        //webView.setWebViewClient(new WebViewClient());
         unsplash = findViewById(R.id.unsplash);
 
        // unsplash.setMovementMethod(LinkMovementMethod.getInstance());
@@ -44,11 +45,11 @@ public class About extends AppCompatActivity {
     //public WebSettings getSettings() {
     //}
 
-    public void setWebViewClient(WebViewClient webViewClient) {
-    }
+    //public void setWebViewClient(WebViewClient webViewClient) {
+    //}
 
-    public void loadUrl(String s) {
-    }
+    //public void loadUrl(String s) {
+    //}
 
 
     @Override
