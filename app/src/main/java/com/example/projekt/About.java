@@ -39,7 +39,7 @@ public class About extends AppCompatActivity {
         //webView.setWebViewClient(new WebViewClient());
         unsplash = findViewById(R.id.unsplash);
 
-       // unsplash.setMovementMethod(LinkMovementMethod.getInstance());
+       unsplash.setMovementMethod(LinkMovementMethod.getInstance());
 
 
     }
