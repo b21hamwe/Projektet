@@ -2,11 +2,11 @@ Rapport för projekt i Programmering av mobila applikationer
 Hampus Wetterlind, b21hamwe, Webug21
 
 
-Klassen MainActivity
-I MainActivity påbörjar vi med att skapa privata member variabler, dessa variabler används sedan i funktioner.
+Aktiviteten MainActivity
+I aktiviteten MainActivity påbörjar vi med att skapa privata member variabler, dessa variabler används sedan i funktioner.
 För att hämta Json datan så använde jag mig utav en recyclerView tillsammans med enstaka rader koder som 
 hämtar datan från webbsidan (Rad 14,15,18). 
-För att skapa menyn där vi kan välja mellan landningsidan samt about sidan har jag använt mig av intents (Rad 29).
+För att byta mellan menyn där vi kan välja mellan landningsidan samt about sidan har jag använt mig av intents (Rad 29).
 ```
 private ArrayList<Blommor> blommorList;
     private RecyclerView recyclerView;
@@ -112,8 +112,8 @@ public String getName() {
                 this.name = blomma;
         }
 ```
-Klassen About
-Klassen About är till för att skapa en intern sida som ett komplement för våran landningsida, då man 
+Aktiviteten About
+Aktiviteten About är till för att skapa en intern sida som ett komplement för våran landningsida, då man 
 via en toolbar meny kan klicka sig in en About sida som har lite förklarande text om applikationen, dess målgrupp samt
 länk till licensen för bilden som används i applikationen. Layouten för About sidan presenteras via xml filen activity_about.xml. 
 Man kan byta mellan sidorna med hjälp av intents (Rad 128). 
@@ -133,4 +133,9 @@ Man kan byta mellan sidorna med hjälp av intents (Rad 128).
         }
 ```
 XML file meny samt close_meny
-![](android.png)
+Har en xml layout fil som är kopplad till "onCreateOptionsMenu" som skapar layouten för toolbaren. 
+Det existerar två av dessa xml filer, en för landningsidan samt en för About sidan. 
+![](bild1.png)
+![](bild2.png)
+![](bild3.png)
+![](bild4.png)
