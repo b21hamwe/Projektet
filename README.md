@@ -135,6 +135,15 @@ Man kan byta mellan sidorna med hjälp av intents (Rad 128).
 XML file meny samt close_meny
 Har en xml layout fil som är kopplad till "onCreateOptionsMenu" som skapar layouten för toolbaren. 
 Det existerar två av dessa xml filer, en för landningsidan samt en för About sidan. 
+
+Skiss
+Jag skissade inte upp någon design ide på hur jag ville att man applikation skulle se ut, detta för 
+att jag i början av projektet inte la ner så mycket tid eller tanke på själva designen av applikationen.
+Däremot funderade jag mer på hur jag skulle hämta min data och vad för typ av data jag skulle vilja presentera
+vilket jag planerade och tänkte på för mig själv i huvudet. Layouten för själva applikationen var något jag funderade kortsiktigt på efter att jag lyckades få 
+min "recyclerView" samt andra funktioner att fungera. 
+
+BILDER från applikationen. 
 ![](bild1.png)
 ![](bild2.png)
 ![](bild3.png)
